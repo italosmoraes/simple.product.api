@@ -1,12 +1,12 @@
 # simple.product.api
 
 
-## To Run
+## Full api/db run
 ```
 docker-compose up -d
 ```
 
-## Run local api
+## Run solo api
 
 ```
 docker build . --tag simple.product.api
