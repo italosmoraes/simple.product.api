@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+  mongo:
+    image: mongo:6
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_DATABASE=$TARGET_ENV
+    volumes:
+      - .resources/mongodb:/data/db
+    container_name: mongodb
+    networks:
+      - local
+  
+  api:
+    build: .
+    container_name: simple.product.api
+    environment:
+      - MONGODB_URI=mongodb
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+    networks:
+      - local
+
+networks:
+  local:
+    name: local-network
+    driver: bridge

@@ -1,0 +1,26 @@
+{
+  "name": "simple.product.api",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "jest",
+    "start": "ts-node src/server.ts",
+    "dev": "npm run build \n npm run start"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^8.4.5",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.1",
+    "@types/node": "^17.0.38",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.3"
+  }
+}
